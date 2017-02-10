@@ -1,5 +1,4 @@
 const express = require('express');
-const stormpath = require('express-stormpath');
 const path = require('path');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
@@ -138,7 +137,6 @@ app.get('/:type(artists|albums|favorites|new)', isAuthenticated, (req, res) => {
     }
   })
 })
-
 
 var server = app.listen(app.get('port'), () => {
   console.log('Server listening on http://localhost:' + server.address().port);

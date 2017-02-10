@@ -3,10 +3,6 @@ import './App.css';
 import TypeList from './TypeList';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import AddTrack from './AddTrack';
-let url = "http://localhost:3000";
-if (process.env.NODE_ENV === 'development') {
-  url = "http://localhost:3001";
-}
 
 class App extends Component {
   state = {
@@ -21,7 +17,7 @@ class App extends Component {
   }
 
   fetchTracks = (type) => {
-    fetch(`${url}/tracks?sort=${this.typeMap[type]}`, {
+    fetch(`/tracks?sort=${this.typeMap[type]}`, {
       headers: {
         'Content-Type': 'application/json'
       },

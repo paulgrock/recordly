@@ -1,5 +1,6 @@
 import React from 'react';
 import TypeListItem from './TypeListItem';
+import { Link } from 'react-router-dom';
 
 export default class TypeList extends React.Component {
   state = {
@@ -38,19 +39,25 @@ export default class TypeList extends React.Component {
     return (
       <div>
         <h1>{type}</h1>
-        <table>
-          <thead>
-            <tr>
-              <td>Title</td>
-              <td>Artist</td>
-              <td>Album</td>
-              <td>Favorite</td>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.sortedTracks.map(track => <TypeListItem track={track} />)}
-          </tbody>
-        </table>
+        {
+          this.state.sortedTracks.length 
+          ? (
+            <table>
+              <thead>
+                <tr>
+                  <td>Title</td>
+                  <td>Artist</td>
+                  <td>Album</td>
+                  <td>Favorite</td>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.sortedTracks.map(track => <TypeListItem track={track} />)}
+              </tbody>
+            </table>
+          )
+          : <p>No tracks found. <Link to="/new">Add</Link> some new ones.</p>
+        }
       </div>
     )
   }

@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import TrackField from './TrackField';
 import TypeList from './TypeList';
-let url = "http://localhost:3000";
-if (process.env.NODE_ENV === 'development') {
-  url = "http://localhost:3001";
-}
 
 export default class AddSong extends Component {
   state = {
@@ -21,7 +17,7 @@ export default class AddSong extends Component {
   }
   handleSubmit = (evt) => {
     evt.preventDefault();
-    fetch(`${url}/tracks/new`, {
+    fetch(`/tracks/new`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -45,8 +41,8 @@ export default class AddSong extends Component {
       }
     }
     return (
-      <div>
-        <form method="POST" action={`${url}/addTrack`} onSubmit={this.handleSubmit} name="addTrack">
+      <div class="new-track">
+        <form method="POST" action={`/tracks/new`} onSubmit={this.handleSubmit} name="addTrack">
           <TrackField type="title" handleInputChange={this.handleInputChange} val={this.state.title} />
           <TrackField type="artist" handleInputChange={this.handleInputChange} val={this.state.artist} />
           <TrackField type="album" handleInputChange={this.handleInputChange} val={this.state.album} />

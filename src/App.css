@@ -1,3 +1,7 @@
+body {
+  margin-top: 1rem;
+}
+
 ul, li {
   margin: 0;
   padding: 0;
@@ -20,6 +24,11 @@ li.active a {
     color: gold;
 }
 
-h1 {
+h1, 
+label {
   text-transform: capitalize;
+}
+
+.new-track {
+  margin-top: 1rem;
 }
