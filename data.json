@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1018037,
+        "artist": "Eminem",
+        "album": "8 Mile (Music from and Inspired By the Motion Picture)",
+        "track": "Lose Yourself",
+        "favorite": true
+    },
+    {
+        "id": 378423583,
+        "artist": "Eminem",
+        "album": "Recovery (Deluxe Edition)",
+        "track": "Not Afraid",
+        "favorite": false
+    },
+    {
+        "id": 111086,
+        "artist": "Eminem",
+        "album": "The Eminem Show",
+        "track": "'Till I Collapse",
+        "favorite": false
+    },
+    {
+        "id": 378423786,
+        "artist": "Eminem",
+        "album": "Recovery (Deluxe Edition)",
+        "track": "Love the Way You Lie (feat. Rihanna)",
+        "favorite": false
+    },
+    {
+        "id": 362088,
+        "artist": "Eminem",
+        "album": "The Marshall Mathers LP",
+        "track": "The Real Slim Shady",
+        "favorite": false
+    }
+]

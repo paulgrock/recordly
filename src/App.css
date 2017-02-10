@@ -1,0 +1,25 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+li + li {
+  margin-left: .5em;
+}
+
+li + li:before {
+  content: " | "
+}
+
+li.active a {
+    color: gold;
+}
+
+h1 {
+  text-transform: capitalize;
+}
